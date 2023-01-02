@@ -9,9 +9,7 @@ Furthermore addition to this we created the files for 3 different GET routes & f
 Routes ->>
 
 ✅GET [http://localhost:3000/subscribers] - Response with an array of subscribers(an Object)
-
 ✅GET [http://localhost:3000/subscribers/names] - Response with an array of subscribers(an Object with only two fields name and subscribedChannel)
-
 ✅GET [http://localhost:3000/subscribers/:id] - Response with a subscriber*(an object)* with given id
 
 ✅& Response with status code 400 and Error message({message: error.message}) if id does not match

@@ -27,3 +27,18 @@ exports.getSubscriberById = async (req, res) => {
 
   res.json(subscriber);
 };
+
+exports.addSubscriber = async (req, res) => {
+  const { name, subscribedChannel } = req.body;
+
+  const subscriber = await Subscriber.create({
+    name,
+    subscribedChannel,
+  });
+
+  res.status(200).json({
+    success: true,
+    message: 'Subscriber Created!',
+    subscriber,
+  });
+};
